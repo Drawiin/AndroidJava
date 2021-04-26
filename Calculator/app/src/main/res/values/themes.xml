@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/purple_black</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="backgroundColor">@color/black_surface</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/purple_black</item>
+    </style>
+
+    <style name="DigitButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">56sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/quicksand</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="minHeight">0dp</item>
+
+        <item name="android:padding">8dp</item>
+        <item name="minWidth">0dp</item>
+    </style>
+
+    <style name="OutlinedButton" parent="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="minHeight">0dp</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:textAlignment">center</item>
+        <item name="iconSize">32dp</item>
+        <item name="minWidth">0dp</item>
+        <item name="android:textSize">38sp</item>
+    </style>
+</resources>

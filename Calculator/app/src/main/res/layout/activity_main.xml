@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.drawiin.calculator.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_surface"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_display"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/purple_black"
+            android:fontFamily="@font/quicksand"
+            android:gravity="bottom"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlCompat"
+            app:layout_constraintBottom_toTopOf="@id/button_9"
+            tools:text="20+30" />
+
+        <Button
+            android:id="@+id/button_7"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="7"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_display" />
+
+        <Button
+            android:id="@+id/button_4"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_7" />
+
+        <Button
+            android:id="@+id/button_1"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/white"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_4" />
+
+        <Button
+            android:id="@+id/button_8"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="8"
+            android:textColor="@color/white"
+
+            app:layout_constraintStart_toEndOf="@id/button_7"
+            app:layout_constraintTop_toBottomOf="@id/tv_display" />
+
+        <Button
+            android:id="@+id/button_5"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@id/button_7"
+            app:layout_constraintTop_toBottomOf="@id/button_8" />
+
+        <Button
+            android:id="@+id/button_2"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/white"
+
+            app:layout_constraintStart_toEndOf="@id/button_7"
+            app:layout_constraintTop_toBottomOf="@id/button_4" />
+
+        <Button
+            android:id="@+id/button_0"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_7"
+            app:layout_constraintTop_toBottomOf="@id/button_2" />
+
+        <Button
+            android:id="@+id/button_9"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="9"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/button_6"
+            app:layout_constraintStart_toEndOf="@id/button_8"
+            app:layout_constraintTop_toBottomOf="@id/tv_display" />
+
+        <Button
+            android:id="@+id/button_6"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="6"
+            app:layout_constraintBottom_toTopOf="@+id/button_3"
+            app:layout_constraintStart_toEndOf="@id/button_8"
+            app:layout_constraintTop_toBottomOf="@id/button_8" />
+
+        <Button
+            android:id="@+id/button_3"
+            style="@style/DigitButton"
+            android:layout_width="@dimen/button_number_width"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/white"
+
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_8"
+            app:layout_constraintTop_toBottomOf="@id/button_4" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="32dp"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/button_0"
+            app:layout_constraintStart_toEndOf="@id/button_9"
+            app:layout_constraintTop_toTopOf="@id/button_9" />
+
+        <Button
+            android:id="@+id/button_clear"
+            style="@style/OutlinedButton"
+            android:layout_marginStart="24dp"
+            android:layout_width="0dp"
+            android:insetRight="4dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="38dp"
+            android:text="c"
+            app:layout_constraintEnd_toStartOf="@id/button_backspace"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/tv_display" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_multiply"
+            style="@style/OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            app:icon="@drawable/ic_baseline_close_24"
+            app:layout_constraintEnd_toStartOf="@+id/button_divide"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/button_clear" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_minus"
+            style="@style/OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="16dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:layout_constraintEnd_toStartOf="@+id/button_plus"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/button_multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_backspace"
+            style="@style/OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="38dp"
+            app:icon="@drawable/ic_baseline_backspace_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_clear"
+            app:layout_constraintTop_toBottomOf="@id/tv_display" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_divide"
+            style="@style/OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:textAlignment="textEnd"
+            app:icon="@drawable/ic_divide_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_clear"
+            app:layout_constraintTop_toBottomOf="@id/button_clear" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_plus"
+            style="@style/OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_clear"
+            app:layout_constraintTop_toBottomOf="@id/button_multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_equals"
+            app:layout_constraintTop_toBottomOf="@id/button_minus"
+            app:layout_constraintStart_toEndOf="@id/separator"
+            app:layout_constraintBottom_toBottomOf="@id/separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_marginStart="24dp"
+            android:text="="
+            android:padding="0dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="56sp"
+            android:layout_height="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
