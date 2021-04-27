@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Navigation</string>
+    <string name="login">Login</string>
+    <string name="about">Sobre</string>
+    <string name="sign_up">Cadastro</string>
+    <string name="about_students"><![CDATA[Alunos\n\nGeise da Silva Souza\n&\nVinicius Santos Guimarães]]></string>
+    <string name="got_to_ufms">Ir para UFMS</string>
+    <string name="register">Cadastrar</string>
+    <string name="user">Usuário</string>
+    <string name="password">Senha</string>
+    <string name="name">Nome</string>
+    <string name="sex">Sexo</string>
+    <string name="birth">Data de nascimento</string>
+    <string name="street">Rua</string>
+    <string name="number">Número</string>
+    <string name="postal_code">CEP</string>
+    <string name="city">Cidade</string>
+    <string name="state">Stado</string>
+    <string name="enter">Entrar</string>
 </resources>
