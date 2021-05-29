@@ -5,17 +5,26 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.drawiin.navigationarguments.R;
+import com.drawiin.navigationarguments.databinding.ActivityGameDetailsBinding;
 import com.drawiin.navigationarguments.model.Game;
 
 public class GameDetails extends AppCompatActivity {
+    private ActivityGameDetailsBinding binding;
+
     private final Game game = (Game) getIntent().getSerializableExtra(GAME_EXTRA);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_details);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_game_details);
+        setupUi();
+    }
+
+    private void setupUi(){
+
     }
 
     private static final String GAME_EXTRA = "GAME_EXTRA";
