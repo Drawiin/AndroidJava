@@ -1,8 +1,10 @@
-package com.drawiin.navigationarguments;
+package com.drawiin.navigationarguments.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.drawiin.navigationarguments.R;
 
 public class MainActivity extends AppCompatActivity {
 

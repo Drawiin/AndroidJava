@@ -1,6 +1,8 @@
 package com.drawiin.navigationarguments.model;
 
-public class Game {
+import java.io.Serializable;
+
+public class Game implements Serializable {
     private final String title;
     private final Gender gender;
     private final Platform platform;
