@@ -16,13 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="16dp"
-            android:padding="16dp"
+            android:layout_marginVertical="@dimen/spacing_2x"
+            android:padding="@dimen/spacing_2x"
             android:text="@string/login"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             app:icon="@drawable/ic_baseline_login_24"
-            app:iconPadding="16dp"
+            app:iconPadding="@dimen/spacing_2x"
             app:strokeColor="@color/primaryColor" />
 
         <com.google.android.material.button.MaterialButton
@@ -31,13 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="16dp"
-            android:padding="16dp"
+            android:layout_marginVertical="@dimen/spacing_2x"
+            android:padding="@dimen/spacing_2x"
             android:text="@string/sign_up"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             app:icon="@drawable/ic_baseline_app_registration_24"
-            app:iconPadding="16dp"
+            app:iconPadding="@dimen/spacing_2x"
             app:strokeColor="@color/primaryColor" />
 
         <com.google.android.material.button.MaterialButton
@@ -46,13 +46,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="16dp"
-            android:padding="16dp"
+            android:layout_marginVertical="@dimen/spacing_2x"
+            android:padding="@dimen/spacing_2x"
             android:text="@string/about"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             app:icon="@drawable/ic_outline_info_24"
-            app:iconPadding="16dp"
+            app:iconPadding="@dimen/spacing_2x"
             app:strokeColor="@color/primaryColor" />
 
 

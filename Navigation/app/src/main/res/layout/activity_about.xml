@@ -42,8 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
-            android:layout_marginVertical="16dp"
-            android:padding="16dp"
+            android:layout_marginVertical="@dimen/spacing_2x"
+            android:padding="@dimen/spacing_2x"
             android:text="@string/got_to_ufms"
             android:textAllCaps="false" />
     </androidx.constraintlayout.widget.ConstraintLayout>

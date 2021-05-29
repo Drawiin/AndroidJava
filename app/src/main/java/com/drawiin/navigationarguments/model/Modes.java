@@ -1,6 +1,8 @@
 package com.drawiin.navigationarguments.model;
 
-public enum Modes {
+import java.io.Serializable;
+
+public enum Modes implements Serializable {
     SINGLE("Single Player"),
     MULTI("Multi Player");
 

@@ -1,11 +1,15 @@
 package com.drawiin.navigationarguments.model;
 
-public enum Platform {
-    XBOX("XBOX"),
+import java.io.Serializable;
+
+public enum Platform implements Serializable {
+    XBOX("Xbox"),
     PS4("PS4"),
-    SWITCH("SWITCH"),
-    ANDROID("ANDROID"),
-    IOS("IOS");
+    SWITCH("Switch"),
+    ANDROID("Android"),
+    IOS("IOS"),
+    LINUX("Linux"),
+    WINDOWS("Windows");
 
 
     private final String name;

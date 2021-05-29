@@ -1,11 +1,13 @@
 package com.drawiin.navigationarguments.model;
 
-public enum Gender {
+import java.io.Serializable;
+
+public enum Gender implements Serializable {
     BATTLE_ROYALE("Battle Royale"),
     FPS("FPS"),
     RPG("RPG"),
     RACE("Corrida"),
-    FIGHT("LUTA");
+    FIGHT("Luta");
 
 
     private final String name;
