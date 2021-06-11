@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AsyncTasks</string>
+    <string name="hint_x_value">Valor de X</string>
+    <string name="btn_start_text">Começar</string>
+    <string name="btn_stop_text">Parar</string>
+    <string name="tv_y_value_placeholder">Valor de Y</string>
+    <string name="tv_y_value_template">Valor de Y %s</string>
+    <string name="tv_x_value_template">Valor de Y %s</string>
+    <string name="tv_x_value_placeholder">Valor de X</string>
+</resources>
