@@ -4,22 +4,25 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
 public class HangedDatabase {
-    private final HangedDbHelper dbHelper;
+    private final HangedDatabaseBuilder dbHelper;
 
-    private HangedDatabase(HangedDbHelper dbHelper) {
+    private HangedDatabase(HangedDatabaseBuilder dbHelper) {
         this.dbHelper = dbHelper;
     }
 
     private static HangedDatabase INSTANCE = null;
 
-    public static HangedDatabase getInstance(HangedDbHelper db) {
+    public static HangedDatabase getInstance(HangedDatabaseBuilder db) {
         if (INSTANCE == null)
             INSTANCE = new HangedDatabase(db);
         return INSTANCE;
     }
 
-    public long insert(String name, ContentValues values) {
-        SQLiteDatabase db = INSTANCE.dbHelper.getWritableDatabase();
-        return db.insert(name, null, values);
+    public SQLiteDatabase getWritableDatabase(){
+        return dbHelper.getWritableDatabase();
+    }
+
+    public SQLiteDatabase getReadableDatabase(){
+        return dbHelper.getReadableDatabase();
     }
 }

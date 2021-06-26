@@ -1,4 +1,4 @@
-package com.drawiin.forca.domain.model;
+package com.drawiin.forca.ui.model;
 
 public class User {
     private final int id;

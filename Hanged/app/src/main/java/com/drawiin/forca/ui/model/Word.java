@@ -1,4 +1,4 @@
-package com.drawiin.forca.domain.model;
+package com.drawiin.forca.ui.model;
 
 public class Word {
     private final int id;
