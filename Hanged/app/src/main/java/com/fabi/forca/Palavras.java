@@ -1,4 +1,4 @@
-package com.drawiin.forca.database.entity;
+package com.fabi.forca;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordEntity {
+public class Palavras {
     public static String TABLE_NAME = "words";
     public static String ID = "_id";
     public static String WORD = "word";

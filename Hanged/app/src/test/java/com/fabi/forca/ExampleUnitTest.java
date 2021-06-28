@@ -1,4 +1,4 @@
-package com.drawiin.forca;
+package com.fabi.forca;
 
 import org.junit.Test;
 

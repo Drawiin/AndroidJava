@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.InsertWordsActivity">
+    tools:context="com.fabi.InsertWordsActivity"
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/text_words"
