@@ -1,16 +1,13 @@
-package com.fabi.forca;
+package com.drawiin.forca;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     private SQLiteOpenHelper dbHelper;
@@ -25,17 +22,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupUi() {
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Insira seu nome e vamos jogar");
-        findViewById(R.id.btn_add_words).setOnClickListener(view -> InserirPalavras.navigate(this));
-
-        findViewById(R.id.btn_jogar).setOnClickListener(view -> {
-            final String nickname = ((EditText) findViewById(R.id.input_nome)).getText().toString();
-            if (!nickname.isEmpty()) {
-                JogoActivity.navigate(this, nickname);
-            } else {
-                Toast.makeText(this, "Insira um nome", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        findViewById(R.id.btn_jogar).setOnClickListener(view -> {
+//            final String nickname = ((EditText) findViewById(R.id.input_nome)).getText().toString();
+//            if (!nickname.isEmpty()) {
+//                JogoActivity.navigate(this, nickname);
+//            } else {
+//                Toast.makeText(this, "Insira um nome", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     private void loadWords() {

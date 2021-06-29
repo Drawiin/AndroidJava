@@ -1,4 +1,4 @@
-package com.fabi.forca;
+package com.drawiin.forca;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,7 +22,7 @@ public class InserirPalavras extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insert_words);
-        findViewById(R.id.btn_save).setOnClickListener(view -> addWord());
+//        findViewById(R.id.btn_save).setOnClickListener(view -> addWord());
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Nova palavra");
         dbHelper = new BaseDeDados(this, BaseDeDados.DATABASE_NAME, 1);
@@ -30,11 +30,11 @@ public class InserirPalavras extends AppCompatActivity {
     }
 
     private void loadWords() {
-        final SQLiteDatabase db = dbHelper.getReadableDatabase();
-        final List<String> result = Palavras.getWords(db);
-        final TextView wordsContainer = findViewById(R.id.text_words);
-        final String text = result.stream().reduce("", (acc, current) -> acc + "\n" + current);
-        wordsContainer.setText("Palavras: \n" + text);
+//        final SQLiteDatabase db = dbHelper.getReadableDatabase();
+//        final List<String> result = Palavras.getWords(db);
+//        final TextView wordsContainer = findViewById(R.id.text_words);
+//        final String text = result.stream().reduce("", (acc, current) -> acc + "\n" + current);
+//        wordsContainer.setText("Palavras: \n" + text);
     }
 
     @Override
@@ -46,14 +46,14 @@ public class InserirPalavras extends AppCompatActivity {
     }
 
     private void addWord() {
-        final EditText input = findViewById(R.id.input_palavra);
-        final String text = input.getText().toString();
-        if (!text.isEmpty()) {
-            final SQLiteDatabase db = dbHelper.getWritableDatabase();
-            Palavras.insert(db, text);
-            input.setText("");
-            loadWords();
-        }
+//        final EditText input = findViewById(R.id.input_palavra);
+//        final String text = input.getText().toString();
+//        if (!text.isEmpty()) {
+//            final SQLiteDatabase db = dbHelper.getWritableDatabase();
+//            Palavras.insert(db, text);
+//            input.setText("");
+//            loadWords();
+//        }
     }
 
     @Override

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="size_avatar">90dp</dimen>
+    <dimen name="height_bg">300dp</dimen>
+    <dimen name="elevation_card_default">0dp</dimen>
+    <dimen name="radius_avatar_card">45dp</dimen>
+    <dimen name="size_small_circle_button">36dp</dimen>
+    <dimen name="radius_samall_counded_button">23dp</dimen>
+    <dimen name="radius_text_input">32dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="text_size_title">32sp</dimen>
+    <dimen name="text_size_timer">32sp</dimen>
+    <dimen name="size_letter_button">40dp</dimen>
+    <dimen name="radius_letter_button">8dp</dimen>
+    <dimen name="padding_medium">24dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+</resources>

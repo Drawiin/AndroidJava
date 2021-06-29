@@ -1,4 +1,4 @@
-package com.fabi.forca;
+package com.drawiin.forca;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

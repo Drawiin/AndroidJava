@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Forca</string>
+    <string name="description_user_avatar">usuário avatar</string>
+    <string name="hint_nickname">Nickname</string>
+    <string name="placeholder_enter_new_word">Entre com seu nickname</string>
+    <string name="label_play">Jogar</string>
+    <string name="label_add_words">Adcionar Palavras</string>
+    <string name="title_register">Bem-vindo(a) ao \n<b>Jogo da Forca</b></string>
+    <string name="title_add_new_words">É só adicionar <b>palavras novas</b></string>
+    <string name="label_menu_restart_game">Reiniciar jogo</string>
+    <string name="label_menu_new_game">Novo jogo</string>
+    <string name="label_menu_exit_game">Sair do jogo</string>
+    <string name="hint_new_word">Nova palavra</string>
+    <string name="label_add_word">Adicionar palavra</string>
 </resources>

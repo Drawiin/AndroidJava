@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fabi.forca">
+    package="com.drawiin.forca">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Forca">
-        <activity android:name="com.fabi.forca.JogoActivity" />
-        <activity android:name="com.fabi.forca.InserirPalavras" />
-        <activity android:name="com.fabi.forca.MainActivity">
+        <activity android:name="com.drawiin.forca.JogoActivity" />
+        <activity android:name="com.drawiin.forca.InserirPalavras" />
+        <activity android:name="com.drawiin.forca.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.fabi.forca"
+        applicationId "com.drawiin.forca"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
