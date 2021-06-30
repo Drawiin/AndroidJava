@@ -1,21 +1,35 @@
 <resources>
     <string name="app_name">Forca</string>
-    <string name="description_user_avatar">usuário avatar</string>
-    <string name="hint_nickname">Nickname</string>
-    <string name="placeholder_enter_new_word">Entre com seu nickname</string>
+
     <string name="label_play">Jogar</string>
     <string name="label_add_words">Adcionar Palavras</string>
-    <string name="title_register">Bem-vindo(a) ao \n<b>Jogo da Forca</b></string>
-    <string name="title_add_new_words">É só adicionar <b>palavras novas</b></string>
     <string name="label_menu_restart_game">Reiniciar jogo</string>
     <string name="label_menu_new_game">Novo jogo</string>
     <string name="label_menu_exit_game">Sair do jogo</string>
-    <string name="hint_new_word">Nova palavra</string>
     <string name="label_add_word">Adicionar palavra</string>
 
+    <string name="title_register">Bem-vindo(a) ao \n<b>Jogo da Forca</b></string>
+    <string name="title_add_new_words">É só adicionar <b>palavras novas</b></string>
     <string name="title_hello_user">Olá %s, escolha uma letra e vamos começar</string>
+
+    <string name="hint_nickname">Nickname</string>
+    <string name="hint_new_word">Nova palavra</string>
+
+    <string name="description_user_avatar">usuário avatar</string>
+
+    <string name="placeholder_enter_new_word">Entre com seu nickname</string>
 
     <string name="error_empty_nickname">O nickname não pode ser vazio</string>
     <string name="error_empty_word">Por favor ensira um palavra</string>
+    <string name="error_letter_played">Você já jogou essa letra</string>
+
     <string name="success_word_added">Palavra adicionada com sucesso</string>
+
+    <string name="dialog_title_lose_game">Perdeu 😢</string>
+    <string name="dialog_message_lose_game_hanged">Você foi errou de mais e foi enforcado 😱, mais sorte na próxima ⏭</string>
+    <string name="dialog_message_lose_game_time_end">Lento de mais 😴, o tempo acabou e você perdeu ⌛, temte ser mais rápido na próxima 🏃‍</string>
+    <string name="dialog_title_win_game">Vitória 😢</string>
+    <string name="dialog_message_win_game">Parabés 👏, você é um(a) gênio e obteve a vitória🎉🎂</string>
+    <string name="dialog_label_primary">Jogar novamente</string>
+    <string name="dialog_label_secondary">Sair</string>
 </resources>

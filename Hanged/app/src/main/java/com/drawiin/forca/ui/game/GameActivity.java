@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.drawiin.forca.R;
 import com.drawiin.forca.databinding.ActivityGameBinding;
+import com.drawiin.forca.utils.DialogUtils;
+import com.drawiin.forca.utils.ResourcesUtils;
+import com.drawiin.forca.utils.ToastUtils;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -52,6 +55,35 @@ public class GameActivity extends AppCompatActivity {
             binding.rvGameWords.setLayoutManager(new GridLayoutManager(this, spanCount));
             gameLettersAdapter.submitList(gameLetters);
         });
+        viewModel.error.observe(this, error -> ToastUtils.makeShortToast(this, error));
+        viewModel.hangedCount.observe(this, sticker -> binding.imgSticker.setImageDrawable(ResourcesUtils.getDrawable(this, sticker)));
+        viewModel.loseGameDialog.observe(this, this::showLoseGameDialog);
+        viewModel.winGameDialog.observe(this, this::showWinGameDialog);
+    }
+
+    private void showLoseGameDialog(String message) {
+        DialogUtils.showDialog(
+                this,
+                getString(R.string.dialog_title_lose_game),
+                message,
+                getString(R.string.dialog_label_primary),
+                getString(R.string.dialog_label_secondary),
+                () -> {
+                },
+                this::finish
+        );
+    }
+
+    private void showWinGameDialog(String message) {
+        DialogUtils.showDialog(
+                this,
+                getString(R.string.dialog_title_win_game),
+                message,
+                getString(R.string.dialog_label_primary),
+                getString(R.string.dialog_label_secondary),
+                () -> {},
+                this::finish
+        );
     }
 
     private static final String NICKNAME = "NICKNAME";

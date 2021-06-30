@@ -32,12 +32,12 @@ public class ItemKeyboardLetterViewHolder extends RecyclerView.ViewHolder {
                 binding.btnLetterContainer.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.surface)));
                 binding.btnLetterContainer.setStrokeColor(getColor(R.color.onSurface));
                 break;
-            case RIGHT:
+            case WRONG:
                 binding.tvLetter.setTextColor(getColor(R.color.surface));
                 binding.btnLetterContainer.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.error)));
                 binding.btnLetterContainer.setStrokeColor(getColor(R.color.error));
                 break;
-            case WRONG:
+            case RIGHT:
                 binding.tvLetter.setTextColor(getColor(R.color.surface));
                 binding.btnLetterContainer.setBackgroundTintList(ColorStateList.valueOf(getColor(R.color.primaryColor)));
                 binding.btnLetterContainer.setStrokeColor(getColor(R.color.primaryColor));
