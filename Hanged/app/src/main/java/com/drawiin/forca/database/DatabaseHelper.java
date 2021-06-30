@@ -1,23 +1,28 @@
-package com.drawiin.forca;
+package com.drawiin.forca.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class BaseDeDados extends SQLiteOpenHelper {
+import javax.inject.Inject;
+
+import dagger.hilt.android.qualifiers.ApplicationContext;
+
+public class DatabaseHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "Hanged.db";
 
-    public BaseDeDados(Context context, String databaseName, int databaseVersion) {
-        super(context, databaseName, null, DATABASE_VERSION);
+    @Inject
+    DatabaseHelper(@ApplicationContext Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Palavras.SQL_CREATE_ENTRIES);
+        db.execSQL(WordsDao.SQL_CREATE_ENTRIES);
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(Palavras.SQL_DELETE_ENTRIES);
+        db.execSQL(WordsDao.SQL_DELETE_ENTRIES);
         onCreate(db);
     }
 

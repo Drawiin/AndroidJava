@@ -12,4 +12,10 @@
     <string name="label_menu_exit_game">Sair do jogo</string>
     <string name="hint_new_word">Nova palavra</string>
     <string name="label_add_word">Adicionar palavra</string>
+
+    <string name="title_hello_user">Olá %s, escolha uma letra e vamos começar</string>
+
+    <string name="error_empty_nickname">O nickname não pode ser vazio</string>
+    <string name="error_empty_word">Por favor ensira um palavra</string>
+    <string name="success_word_added">Palavra adicionada com sucesso</string>
 </resources>

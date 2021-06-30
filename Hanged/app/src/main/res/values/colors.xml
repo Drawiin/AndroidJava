@@ -11,4 +11,5 @@
     <color name="onSurface">#263238</color>
     <color name="grey">#a0a0a0</color>
     <color name="surface">#fafafa</color>
+    <color name="error">#C73035</color>
 </resources>

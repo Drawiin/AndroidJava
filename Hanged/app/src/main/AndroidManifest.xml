@@ -3,15 +3,22 @@
     package="com.drawiin.forca">
 
     <application
+        android:name=".ui.HangedApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Forca">
-        <activity android:name="com.drawiin.forca.JogoActivity" />
-        <activity android:name="com.drawiin.forca.InserirPalavras" />
-        <activity android:name="com.drawiin.forca.MainActivity">
+        <activity
+            android:name="com.drawiin.forca.ui.game.GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drawiin.forca.ui.add_words.AddWordsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.drawiin.forca.ui.register.RegisterActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

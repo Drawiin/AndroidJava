@@ -11,6 +11,7 @@
     <dimen name="margin_large">32dp</dimen>
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="text_size_title">32sp</dimen>
+    <dimen name="text_size_subtitle">24sp</dimen>
     <dimen name="text_size_timer">32sp</dimen>
     <dimen name="size_letter_button">40dp</dimen>
     <dimen name="radius_letter_button">8dp</dimen>

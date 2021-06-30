@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/surface"
+            tools:context=".ui.register.RegisterActivity">
+
+            <ImageView
+                android:id="@+id/img_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_bg"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/title_register"
+                android:textAlignment="center"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/text_size_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/avatar_container"
+                android:layout_width="@dimen/size_avatar"
+                android:layout_height="@dimen/size_avatar"
+                android:layout_marginTop="170dp"
+                app:cardCornerRadius="@dimen/radius_avatar_card"
+                app:cardElevation="@dimen/elevation_card_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/size_avatar"
+                    android:layout_height="@dimen/size_avatar"
+                    android:contentDescription="@string/description_user_avatar"
+                    android:src="@drawable/placeholder_avatar" />
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_photo"
+                android:layout_width="@dimen/size_small_circle_button"
+                android:layout_height="@dimen/size_small_circle_button"
+                android:backgroundTint="@color/surface"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                app:cornerRadius="@dimen/radius_samall_counded_button"
+                app:icon="@drawable/ic_outline_camera_alt_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/onSurface"
+                app:layout_constraintEnd_toEndOf="@id/avatar_container"
+                app:layout_constraintTop_toTopOf="@id/avatar_container"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.Button.Circle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_nickname"
+                style="@style/Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_large"
+                android:hint="@string/hint_nickname"
+                android:textColorHint="@color/onSurface"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/avatar_container"
+                app:placeholderText="@string/placeholder_enter_new_word">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/onSurface" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginTop="@dimen/margin_medium"
+                android:id="@+id/btn_play"
+                app:layout_constraintVertical_bias="1.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:padding="@dimen/padding_default"
+                android:text="@string/label_play"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/radius_text_input"
+                app:layout_constraintBottom_toTopOf="@id/btn_add_words"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_nickname" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_words"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_large"
+
+                android:padding="@dimen/padding_default"
+                android:text="@string/label_add_words"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/radius_text_input"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

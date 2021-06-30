@@ -1,4 +1,4 @@
-package com.drawiin.forca;
+package com.drawiin.forca.database;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Palavras {
+public class WordsDao {
     public static String TABLE_NAME = "words";
     public static String ID = "_id";
     public static String WORD = "word";
@@ -28,7 +28,11 @@ public class Palavras {
     }
 
     public static void insert(SQLiteDatabase db, String newWord) {
-        final ContentValues word = getContentValues(newWord);
+        if(getWords(db).stream().anyMatch(w -> w.equals(newWord.toUpperCase()))){
+            throw new Error("Palavra já existe");
+        }
+        final ContentValues word = getContentValues(newWord.toUpperCase());
+
         final long result = db.insert(TABLE_NAME, null, word);
     }
 
