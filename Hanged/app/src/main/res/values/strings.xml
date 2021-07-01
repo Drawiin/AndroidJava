@@ -26,10 +26,18 @@
     <string name="success_word_added">Palavra adicionada com sucesso</string>
 
     <string name="dialog_title_lose_game">Perdeu 😢</string>
-    <string name="dialog_message_lose_game_hanged">Você foi errou de mais e foi enforcado 😱, mais sorte na próxima ⏭</string>
-    <string name="dialog_message_lose_game_time_end">Lento de mais 😴, o tempo acabou e você perdeu ⌛, temte ser mais rápido na próxima 🏃‍</string>
+    <string name="dialog_message_lose_game_hanged">Você errou de mais e foi enforcado 😱, mais sorte na próxima ⏭</string>
+    <string name="dialog_message_lose_game_time_end">Lento de mais 😴, o tempo acabou e você perdeu ⌛, tente ser mais rápido na próxima 🏃‍</string>
     <string name="dialog_title_win_game">Vitória 😢</string>
+    <string name="dialog_title_new_game">Iniciar novo jogo 🐣</string>
+    <string name="dialog_title_restart_game">Reiniciando jogo 🐣</string>
+    <string name="dialog_title_exit_game">Saindo 🏃‍♀</string>
+    <string name="dialog_message_new_game">Você perdera todo o progresso</string>
     <string name="dialog_message_win_game">Parabés 👏, você é um(a) gênio e obteve a vitória🎉🎂</string>
     <string name="dialog_label_primary">Jogar novamente</string>
+    <string name="dialog_label_continue">Continuar</string>
+    <string name="dialog_label_cancel">Cancelar</string>
     <string name="dialog_label_secondary">Sair</string>
+
+    <string name="template_timer">%02d:%02d</string>
 </resources>

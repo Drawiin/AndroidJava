@@ -26,6 +26,7 @@
                 android:id="@+id/tv_user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/padding_medium"
                 android:textAlignment="center"
                 android:textSize="@dimen/text_size_subtitle"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,10 +46,10 @@
                 tools:text="3:00" />
 
             <ImageView
-                android:layout_marginVertical="@dimen/margin_medium"
                 android:id="@+id/img_sticker"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginVertical="@dimen/margin_medium"
                 android:foregroundGravity="top"
                 android:scaleType="centerInside"
                 android:src="@drawable/sticker_6"
@@ -57,36 +58,36 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_timer" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginHorizontal="@dimen/padding_medium"
                 android:id="@+id/rv_game_words"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/padding_medium"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/item_game_letter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/img_sticker" />
+                app:layout_constraintTop_toBottomOf="@id/img_sticker"
+                tools:listitem="@layout/item_game_letter" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_backdrop"
                 android:backgroundTint="@color/surface"
-                app:layout_constraintVertical_bias="1.0"
                 android:padding="@dimen/padding_medium"
                 app:cardCornerRadius="@dimen/radius_text_input"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rv_game_words">
+                app:layout_constraintTop_toBottomOf="@id/rv_game_words"
+                app:layout_constraintVertical_bias="1.0">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_letter_buttons"
                     android:layout_width="match_parent"
-                    android:layout_gravity="center_horizontal"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     tools:listitem="@layout/item_keyboard_letter" />

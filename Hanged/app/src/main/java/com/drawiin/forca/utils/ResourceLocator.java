@@ -1,6 +1,7 @@
 package com.drawiin.forca.utils;
 
 import android.app.Application;
+import android.content.Context;
 
 import androidx.annotation.StringRes;
 
@@ -16,5 +17,9 @@ public class ResourceLocator {
 
     public String getString(@StringRes Integer stringId) {
         return context.getString(stringId);
+    }
+
+    public String getString(Context context, @StringRes int resId, Object... formatArgs) {
+        return context.getString(resId, formatArgs);
     }
 }

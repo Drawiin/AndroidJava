@@ -10,12 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Forca">
-        <activity
-            android:name="com.drawiin.forca.ui.game.GameActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.drawiin.forca.ui.add_words.AddWordsActivity"
-            android:screenOrientation="portrait" />
+        <activity android:name="com.drawiin.forca.ui.game.GameActivity" />
+        <activity android:name="com.drawiin.forca.ui.add_words.AddWordsActivity" />
         <activity
             android:name="com.drawiin.forca.ui.register.RegisterActivity"
             android:screenOrientation="portrait">

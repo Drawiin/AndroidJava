@@ -19,6 +19,7 @@ import com.drawiin.forca.utils.ResourceLocator;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -37,14 +38,22 @@ public class GameViewModel extends ViewModel {
     GameViewModel(DatabaseHelper dbHelper, ResourceLocator resourceLocator) {
         this.dbHelper = dbHelper;
         this.resourceLocator = resourceLocator;
-        init();
+        startGame();
     }
 
     private Timer timer;
     private String currentWord;
 
     private final MutableLiveData<Long> _timing = new MutableLiveData<>();
-    final LiveData<String> timing = Transformations.map(_timing, Object::toString);
+    final LiveData<String> timing = Transformations.map(
+            _timing,
+            millis -> String.format(
+                    Locale.getDefault(),
+                    "%02d:%02d",
+                    millis / 60,
+                    millis % 60
+            )
+    );
 
     private final MutableLiveData<String> _error = new MutableLiveData<>();
     final LiveData<String> error = _error;
@@ -64,7 +73,40 @@ public class GameViewModel extends ViewModel {
     private final MutableLiveData<Integer> _hangedCount = new MutableLiveData<>(0);
     final LiveData<Integer> hangedCount = Transformations.map(_hangedCount, input -> Constants.STICKERS[Math.min(input, Constants.STICKERS.length - 1)]);
 
-    private void init() {
+    public void onLetterClicked(String letter) {
+        final boolean hasPlayedLetter = _keyBoardLetter
+                .getValue()
+                .stream()
+                .anyMatch(l -> l.getLetter().equals(letter)
+                        && l.getState() != KeyboardLetterState.IDLE);
+
+        if (hasPlayedLetter) {
+            _error.setValue(resourceLocator.getString(R.string.error_letter_played));
+        } else if (currentWord.contains(letter)) {
+            onKeyboardLetterRight(letter);
+            onGameLetterRight(letter);
+        } else {
+            onKeyboardLetterWrong(letter);
+            onGameLetterWrong();
+        }
+    }
+
+    public void onStartNewGameClicked() {
+        startGame();
+    }
+
+    public void onRestartGameClicked() {
+        _hangedCount.setValue(0);
+        loadKeyBoard();
+        final List<GameLetter> letters = Arrays.stream(currentWord.split(""))
+                .map(w -> new GameLetter(false, w))
+                .collect(Collectors.toList());
+        _gameLetter.setValue(letters);
+        startTimer();
+    }
+
+    private void startGame() {
+        _hangedCount.setValue(0);
         loadKeyBoard();
         currentWord = getRandomWord();
         Log.d("CURRENT_WORD", currentWord);
@@ -95,24 +137,6 @@ public class GameViewModel extends ViewModel {
             _error.setValue(e.getMessage());
         }
         return "";
-    }
-
-    public void onLetterClicked(String letter) {
-        final boolean hasPlayedLetter = _keyBoardLetter
-                .getValue()
-                .stream()
-                .anyMatch(l -> l.getLetter().equals(letter)
-                        && l.getState() != KeyboardLetterState.IDLE);
-
-        if (hasPlayedLetter) {
-            _error.setValue(resourceLocator.getString(R.string.error_letter_played));
-        } else if (currentWord.contains(letter)) {
-            onKeyboardLetterRight(letter);
-            onGameLetterRight(letter);
-        } else {
-            onKeyboardLetterWrong(letter);
-            onGameLetterWrong();
-        }
     }
 
     private void onGameLetterRight(String letter) {
