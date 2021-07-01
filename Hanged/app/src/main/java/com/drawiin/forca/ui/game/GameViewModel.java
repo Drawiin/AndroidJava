@@ -15,6 +15,7 @@ import com.drawiin.forca.model.GameLetter;
 import com.drawiin.forca.model.KeyboardLetter;
 import com.drawiin.forca.model.KeyboardLetterState;
 import com.drawiin.forca.utils.Constants;
+import com.drawiin.forca.utils.NotificationsUtils;
 import com.drawiin.forca.utils.ResourceLocator;
 
 import java.util.Arrays;
@@ -23,6 +24,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
@@ -33,11 +35,13 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 public class GameViewModel extends ViewModel {
     private final DatabaseHelper dbHelper;
     private final ResourceLocator resourceLocator;
+    private final NotificationsUtils notificationsUtils;
 
     @Inject
-    GameViewModel(DatabaseHelper dbHelper, ResourceLocator resourceLocator) {
+    GameViewModel(DatabaseHelper dbHelper, ResourceLocator resourceLocator, NotificationsUtils notificationsUtils) {
         this.dbHelper = dbHelper;
         this.resourceLocator = resourceLocator;
+        this.notificationsUtils = notificationsUtils;
         startGame();
     }
 
@@ -191,6 +195,7 @@ public class GameViewModel extends ViewModel {
     private void startTimer() {
         if (timer != null) timer.cancel();
         timer = new Timer();
+        final Consumer<String> updateNotification = notificationsUtils.createNotification(resourceLocator.getString(R.string.notification_title), "00:00");
         new Thread(() -> timer.scheduleAtFixedRate(new TimerTask() {
             long secondsUntilFinished = 60 * 3;
 
@@ -202,7 +207,19 @@ public class GameViewModel extends ViewModel {
                     secondsUntilFinished--;
                 }
                 _timing.postValue(secondsUntilFinished);
+                updateNotification.accept(String.format(
+                        Locale.getDefault(),
+                        "%02d:%02d",
+                        secondsUntilFinished / 60,
+                        secondsUntilFinished % 60
+                ));
             }
         }, 0, 1000)).start();
+    }
+
+    @Override
+    protected void onCleared() {
+        timer.cancel();
+        super.onCleared();
     }
 }
