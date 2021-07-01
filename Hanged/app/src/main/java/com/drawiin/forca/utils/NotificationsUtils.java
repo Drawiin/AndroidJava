@@ -57,6 +57,7 @@ public class NotificationsUtils {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        notificationManager.cancelAll();
         notificationManager.notify(notificationId, builder.build());
         final Consumer<String> update = (value) -> {
             builder.setContentText(value);
@@ -64,5 +65,10 @@ public class NotificationsUtils {
         };
 
         return update;
+    }
+
+    public void dismissAll() {
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        notificationManager.cancelAll();
     }
 }

@@ -220,6 +220,8 @@ public class GameViewModel extends ViewModel {
     @Override
     protected void onCleared() {
         timer.cancel();
+        notificationsUtils.dismissAll();
+        dbHelper.close();
         super.onCleared();
     }
 }
